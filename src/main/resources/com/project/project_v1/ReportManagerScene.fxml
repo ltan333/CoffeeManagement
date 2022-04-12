@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.project_v1.ReportManagerController">
+   <left>
+      <VBox prefHeight="600.0" prefWidth="150.0" style="-fx-background-color: #5b5b5b;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="backBtn" maxWidth="1.7976931348623157E308" prefHeight="37.0" prefWidth="150.0" style="-fx-cursor: hand;" text="Back" textFill="#999999">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-back-96.png" />
+                     </image>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="56.83605194091797" endY="0.4324064254760742" opacity="0.5" startX="-100.0" stroke="#730f0f" />
+            <Label alignment="CENTER" contentDisplay="TOP" maxWidth="1.7976931348623157E308" prefHeight="80.0" prefWidth="150.0" text="REPORT MANAGER" textFill="#999999">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="51.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-report-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Line endX="56.83605194091797" endY="0.4324064254760742" opacity="0.5" startX="-100.0" stroke="#730f0f" />
+            <Label fx:id="perDayBtn" maxWidth="1.7976931348623157E308" prefHeight="58.0" prefWidth="150.0" style="-fx-cursor: hand;" text="Per Day" textFill="#999999">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-plus-1-day-96.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
+            <Label fx:id="perMonthBtn" maxWidth="1.7976931348623157E308" prefHeight="58.0" prefWidth="150.0" style="-fx-cursor: hand;" text="Per Month" textFill="#999999">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-plus-1-month-96.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
+            <Label fx:id="perYearBtn" maxWidth="1.7976931348623157E308" prefHeight="58.0" prefWidth="150.0" style="-fx-cursor: hand;" text="Per Year" textFill="#999999">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-plus-1-year-96.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <AnchorPane prefHeight="62.0" prefWidth="842.0" style="-fx-background-color: #ffb2ea;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="titleLabel" alignment="CENTER" layoutX="335.0" layoutY="15.0" text="Report  per day">
+                     <font>
+                        <Font name="Lucida Handwriting Italic" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <StackPane fx:id="stackPane" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>

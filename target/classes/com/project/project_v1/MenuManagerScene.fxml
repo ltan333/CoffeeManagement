@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.project_v1.MenuManagerController">
+   <left>
+      <VBox prefHeight="400.0" prefWidth="150.0" style="-fx-background-color: #5b5b5b;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="backBtn" maxWidth="1.7976931348623157E308" prefHeight="37.0" prefWidth="160.0" style="-fx-cursor: hand;" text="Back" textFill="#999999">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-back-96.png" />
+                     </image>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="156.0" opacity="0.5" stroke="#730f0f" />
+            <Label alignment="CENTER" contentDisplay="TOP" maxWidth="1.7976931348623157E308" prefHeight="80.0" prefWidth="150.0" text="MENU MANAGER" textFill="#999999">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="51.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-menu-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Line endX="156.0" opacity="0.5" stroke="#730f0f" />
+            <Label fx:id="menuListBtn" maxWidth="1.7976931348623157E308" prefHeight="58.0" prefWidth="160.0" style="-fx-cursor: hand;" text="Menu List" textFill="#999999">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-restaurant-menu-96.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
+            <Label fx:id="addBtn" maxWidth="1.7976931348623157E308" prefHeight="58.0" prefWidth="160.0" style="-fx-cursor: hand;" text="Add A Item" textFill="#999999">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-add-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <BorderPane fx:id="subBorderPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <ScrollPane fx:id="mainPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background: #f9daf1; -fx-border-color: #f9daf1;" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <AnchorPane prefHeight="62.0" prefWidth="842.0" style="-fx-background-color: #e4b1d6;" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="searchField" layoutX="279.0" layoutY="14.0" prefHeight="26.0" prefWidth="300.0" promptText="Search" />
+                  <Label fx:id="errSearchLabel" layoutX="279.0" layoutY="42.0" prefHeight="18.0" prefWidth="182.0" text=" " textFill="#f70000">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.project_v1.OrderManagerController">
+   <left>
+      <VBox prefHeight="400.0" prefWidth="150.0" style="-fx-background-color: #5b5b5b;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="backBtn" maxWidth="1.7976931348623157E308" prefHeight="37.0" prefWidth="150.0" style="-fx-cursor: hand;" text="Back" textFill="#999999">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-back-96.png" />
+                     </image>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="56.83605194091797" endY="0.4324064254760742" opacity="0.5" startX="-100.0" stroke="#730f0f" />
+            <Label alignment="CENTER" contentDisplay="TOP" maxWidth="1.7976931348623157E308" prefHeight="80.0" prefWidth="150.0" text="ORDER MANAGER" textFill="#999999">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="51.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-bill-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Line endX="56.83605194091797" endY="0.4324064254760742" opacity="0.5" startX="-100.0" stroke="#730f0f" />
+            <Label fx:id="billListBtn" maxWidth="1.7976931348623157E308" prefHeight="58.0" prefWidth="150.0" style="-fx-cursor: hand;" text="Bill List" textFill="#999999">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@a.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
+            <Label fx:id="createBillBtn" maxWidth="1.7976931348623157E308" prefHeight="58.0" prefWidth="150.0" style="-fx-cursor: hand;" text="Create A Bill" textFill="#999999">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@c.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <AnchorPane prefHeight="62.0" prefWidth="842.0" style="-fx-background-color: #ffb2ea;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="titleLabel" layoutX="381.0" layoutY="19.0" text="All bill">
+                     <font>
+                        <Font name="Lucida Handwriting Italic" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <ScrollPane fx:id="billPane" prefHeight="538.0" prefWidth="525.0" BorderPane.alignment="CENTER">
+               <content>
+                  <Label text="1">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                  </Label>
+               </content>
+            </ScrollPane>
+         </center>
+         <right>
+            <BorderPane fx:id="billDetailPane" prefHeight="538.0" prefWidth="265.0" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </center>
+</BorderPane>

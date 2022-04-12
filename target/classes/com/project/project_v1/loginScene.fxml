@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="stageForKey" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.project_v1.LoginController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="250.0" style="-fx-background-color: #272f2a;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="userNameTextField" layoutX="22.0" layoutY="111.0" prefHeight="27.0" prefWidth="205.0" promptText="Username" style="-fx-border-radius: 3;">
+               <effect>
+                  <Glow level="0.08" />
+               </effect>
+            </TextField>
+            <PasswordField fx:id="passwordField" layoutX="22.0" layoutY="158.0" prefHeight="26.0" prefWidth="206.0" promptText="Password" style="-fx-border-radius: 21;" />
+            <CheckBox fx:id="remenberLoginCheckbox" layoutX="22.0" layoutY="198.0" mnemonicParsing="false" text="Keep me logged in" textFill="WHITE" />
+            <Button fx:id="loginBtn" layoutX="69.0" layoutY="240.0" mnemonicParsing="false" onAction="#login" prefHeight="34.0" prefWidth="112.0" style="-fx-background-color: #00727f; -fx-border-radius: 3; -fx-cursor: hand;" text="Log In" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+            <Button fx:id="forgotPassBtn" layoutX="66.0" layoutY="281.0" mnemonicParsing="false" onAction="#forgotPassBtnClicked" prefHeight="27.0" prefWidth="117.0" style="-fx-background-color: #272f2a; -fx-cursor: hand;" text="Forgot Password?" textFill="#00727f">
+               <font>
+                  <Font name="System Italic" size="13.0" />
+               </font>
+            </Button>
+            <Label layoutX="83.0" layoutY="24.0" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Forte" size="37.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="323.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="526.0" fitWidth="379.0" layoutY="-80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cafe.jpg" />
+               </image>
+               <effect>
+                  <Lighting bumpInput="$null">
+                     <light>
+                        <Light.Distant>
+                           <color>
+                              <Color red="0.5600000023841858" green="0.4927999973297119" blue="0.4927999973297119" />
+                           </color>
+                        </Light.Distant>
+                     </light>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <Label layoutX="45.0" layoutY="154.0" prefHeight="46.0" prefWidth="257.0" text="Wellcome Back!" textFill="WHITE">
+               <font>
+                  <Font name="Ravie" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="200.0" prefHeight="22.0" prefWidth="296.0" text="Login and managment your shop :)" textFill="WHITE">
+               <font>
+                  <Font name="Ravie" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

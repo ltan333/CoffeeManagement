@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.project_v1.AccountManagerController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="150.0" style="-fx-background-color: #5b5b5b;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="150.0">
+               <children>
+                  <Label fx:id="backBtn" maxWidth="1.7976931348623157E308" prefHeight="37.0" prefWidth="160.0" style="-fx-cursor: hand;" text="Back" textFill="#999999">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-back-96.png" />
+                           </image>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Line endX="56.83605194091797" endY="0.4324064254760742" opacity="0.5" startX="-100.0" stroke="#730f0f" />
+                  <Label alignment="CENTER" contentDisplay="TOP" maxWidth="1.7976931348623157E308" prefHeight="80.0" prefWidth="150.0" text="ACCOUNT MANAGER" textFill="#999999">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="51.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-account-100.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Line endX="56.83605194091797" endY="0.4324064254760742" opacity="0.5" startX="-100.0" stroke="#730f0f" />
+                  <Label fx:id="infoBtn" maxWidth="1.7976931348623157E308" prefHeight="58.0" prefWidth="160.0" style="-fx-cursor: hand;" text="Information" textFill="#999999">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-info-80.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="changePassBtn" maxWidth="1.7976931348623157E308" prefHeight="58.0" prefWidth="160.0" style="-fx-cursor: hand;" text="Change Password" textFill="#999999">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-password-64.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="logoutBtn" maxWidth="1.7976931348623157E308" prefHeight="58.0" prefWidth="160.0" style="-fx-cursor: hand;" text="Logout" textFill="#999999">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-logout-80.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="450.0" style="-fx-background-color: #3e4044;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="infoScene" layoutX="-2.0" prefHeight="400.0" prefWidth="446.0">
+               <children>
+                  <Label fx:id="adminInforTitle" alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="45.0" prefWidth="415.0" text="Administrator Information" textAlignment="JUSTIFY" textFill="#50b0d9" wrapText="true">
+                     <font>
+                        <Font name="Times New Roman" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="fullNamelabel" layoutX="28.0" layoutY="88.0" prefHeight="32.0" prefWidth="323.0" text="Full name: " textFill="#50b0d9">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Label>
+                  <Line fx:id="adminInforLine" endX="236.0" layoutX="126.0" layoutY="59.0" startX="-43.0" stroke="#92a4ab" />
+                  <Line fx:id="fullNameLine" endX="321.0" layoutX="101.0" layoutY="119.0" startX="-76.0" stroke="#92a4ab" />
+                  <Label fx:id="meowLabel" layoutX="28.0" layoutY="132.0" prefHeight="31.0" prefWidth="323.0" text="Email: " textFill="#50b0d9">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Label>
+                  <Line fx:id="emailLine" endX="296.0" layoutX="126.0" layoutY="170.0" startX="-100.0" stroke="#92a4ab" />
+                  <Line fx:id="phoneNumberLine" endX="296.0" layoutX="125.0" layoutY="218.0" startX="-100.0" stroke="#92a4ab" />
+                  <Label fx:id="nameCoffeeShop" alignment="CENTER" layoutX="28.0" layoutY="235.0" prefHeight="132.0" prefWidth="394.0" text="COFFEE SHOP MANAGEMENT" textFill="#50b0d9">
+                     <font>
+                        <Font name="Unispace-Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="changeEmailBtn" layoutX="363.0" layoutY="135.0" mnemonicParsing="false" text="Thay đổi" />
+                  <Button fx:id="changeNameBtn" layoutX="363.0" layoutY="88.0" mnemonicParsing="false" text="Thay đổi" />
+                  <Button fx:id="changePhoneNumberBtn" layoutX="363.0" layoutY="181.0" mnemonicParsing="false" text="Thay đổi" />
+                  <Label fx:id="phoneNumberLabel" layoutX="25.0" layoutY="180.0" prefHeight="31.0" prefWidth="323.0" text="Phone Number: " textFill="#50b0d9">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="changePassScene" prefHeight="400.0" prefWidth="442.0" visible="false">
+               <children>
+                  <PasswordField fx:id="oldPassField" layoutX="118.0" layoutY="72.0" prefHeight="26.0" prefWidth="206.0" promptText="Old Password" style="-fx-border-radius: 21;" />
+                  <PasswordField fx:id="newPassField" layoutX="118.0" layoutY="155.0" prefHeight="26.0" prefWidth="206.0" promptText="New Password" style="-fx-border-radius: 21;" />
+                  <PasswordField fx:id="verifyPassField" layoutX="118.0" layoutY="211.0" prefHeight="26.0" prefWidth="206.0" promptText="Verify New Password" style="-fx-border-radius: 21;" />
+                  <Label fx:id="errMatchLabel" layoutX="120.0" layoutY="237.0" prefHeight="18.0" prefWidth="204.0" textFill="RED" />
+                  <Button fx:id="OkBtn" layoutX="165.0" layoutY="263.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="112.0" style="-fx-background-color: #00727f; -fx-border-radius: 3; -fx-cursor: hand;" text="OK" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="forgotPassBtn" layoutX="162.0" layoutY="305.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="117.0" style="-fx-background-color: #3e4044#2f3136; -fx-cursor: hand;" text="Forgot Password?" textFill="#00727f">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
