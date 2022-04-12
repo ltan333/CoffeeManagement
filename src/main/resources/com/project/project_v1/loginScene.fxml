@@ -25,7 +25,7 @@
                </effect>
             </TextField>
             <PasswordField fx:id="passwordField" layoutX="22.0" layoutY="158.0" prefHeight="26.0" prefWidth="206.0" promptText="Password" style="-fx-border-radius: 21;" />
-            <CheckBox fx:id="remenberLoginCheckbox" layoutX="22.0" layoutY="198.0" mnemonicParsing="false" text="Keep me logged in" textFill="WHITE" />
+            <CheckBox fx:id="rememberLoginCheckbox" layoutX="22.0" layoutY="198.0" mnemonicParsing="false" text="Keep me logged in" textFill="WHITE" />
             <Button fx:id="loginBtn" layoutX="69.0" layoutY="240.0" mnemonicParsing="false" onAction="#login" prefHeight="34.0" prefWidth="112.0" style="-fx-background-color: #00727f; -fx-border-radius: 3; -fx-cursor: hand;" text="Log In" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
@@ -48,7 +48,7 @@
          <children>
             <ImageView fitHeight="526.0" fitWidth="379.0" layoutY="-80.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@cafe.jpg" />
+                  <Image url="@image/cafe.jpg" />
                </image>
                <effect>
                   <Lighting bumpInput="$null">

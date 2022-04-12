@@ -121,7 +121,7 @@ public class AccountManagerController implements Initializable {
             if(verifyPassField.getText().equals(newPassField.getText())) {
                 errMatchLabel.setText("");
             }else {
-                errMatchLabel.setText("Not Match!");//v là xong, bên menu, bên bill chưa làm kìa trống chơn z
+                errMatchLabel.setText("Not Match!");
             }
         });
 
@@ -225,25 +225,34 @@ public class AccountManagerController implements Initializable {
         //Event đổi tên.
         changeNameBtn.setOnMouseClicked(mouseEvent -> {
             String newName = new CreateMessBox().popupBoxGetText("Change Name","Enter new full name");
-            fullNamelabel.setText(newName.isEmpty()?account.getName():"Full Name: "+newName);
-            account.setName(newName.isEmpty()?account.getName():newName);
-            try {
-                account.writeFile(account.getFilePath(), account.getPass());
-            } catch (IOException e) {
-                e.printStackTrace();
+            if(checkInput.checkMaxStringLength(newName,25)){
+                popup.popupBoxMess("Name must be shorter 25 character!",2);
+            }else{
+                fullNamelabel.setText(newName.isEmpty()?"Full Name: "+account.getName():"Full Name: "+checkInput.setNameFormat(newName));
+                account.setName(newName.isEmpty()?account.getName():checkInput.setNameFormat(newName));
+                try {
+                    account.writeFile(account.getFilePath(), account.getPass());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
+
         });
 
         meowLabel.setText("Email: "+account.getMeow());
         //Event đổi meow.
         changeEmailBtn.setOnMouseClicked(mouseEvent -> {
             String newMeow = new CreateMessBox().popupBoxGetText("Change Email","Enter new email");
-            meowLabel.setText(newMeow.isEmpty()?account.getMeow():"Email: "+newMeow);
-            account.setMeow(newMeow.isEmpty()?account.getMeow():newMeow);
-            try {
-                account.writeFile(account.getFilePath(), account.getPass());
-            } catch (IOException e) {
-                e.printStackTrace();
+            if(!checkInput.isEmail(newMeow)){
+                popup.popupBoxMess("Invalid email!",2);
+            }else {
+                meowLabel.setText(newMeow.isEmpty()?"Email: "+account.getMeow():"Email: "+newMeow);
+                account.setMeow(newMeow.isEmpty()?account.getMeow():newMeow);
+                try {
+                    account.writeFile(account.getFilePath(), account.getPass());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -251,15 +260,23 @@ public class AccountManagerController implements Initializable {
         //Event đổi sđt.
         changePhoneNumberBtn.setOnMouseClicked(mouseEvent -> {
             String newPhoneNumber = new CreateMessBox().popupBoxGetText("Change Phone Number","Enter new phone number");
-            phoneNumberLabel.setText(newPhoneNumber.isEmpty()?account.getPhoneNumber():"Phone Number: "+newPhoneNumber);
-            account.setPhoneNumber(newPhoneNumber.isEmpty()?account.getPhoneNumber():newPhoneNumber);
-            try {
-                account.writeFile(account.getFilePath(), account.getPass());
-            } catch (IOException e) {
-                e.printStackTrace();
+            if(!checkInput.isPhoneNumber(newPhoneNumber)){
+                popup.popupBoxMess("Invalid Phone Number!",2);
+            }else {
+                phoneNumberLabel.setText(newPhoneNumber.isEmpty()?account.getPhoneNumber():"Phone Number: "+newPhoneNumber);
+                account.setPhoneNumber(newPhoneNumber.isEmpty()?account.getPhoneNumber():newPhoneNumber);
+                try {
+                    account.writeFile(account.getFilePath(), account.getPass());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
+    }
+
+    public void forgotPassBtnClicked() {
+        popup.popupBoxMess("Please Contact To Me!",1);
     }
 
     private void logout() throws IOException {
@@ -292,7 +309,7 @@ public class AccountManagerController implements Initializable {
         }
         //thêm trường hợp trống
         if(checkInput.isEmptyString(newPassField.getText())){
-            popup.popupBoxMess("New password is empty!",2);//qa class popup sửa lại chỗ loại popup đi, có 3 loại
+            popup.popupBoxMess("New password is empty!",2);
             return false;
         }
         if(checkInput.checkMinStringLength(newPassField.getText(),5))
@@ -303,11 +320,9 @@ public class AccountManagerController implements Initializable {
         if(checkInput.checkMaxStringLength(newPassField.getText(),20))
         {
             popup.popupBoxMess("Password must be shorter than 20 characters! ",2);//Mà đã không phân biệt pass mới hay cũ thì xóa luôn đi nhìn nó kì kì lắm
-            return false;//ủa sửa r để luôn vậy hả
+            return false;
         }
-        //Event so sánh pass mới vs nhập lại pass mới
-        //Event này nó diễn ra ở đâu, khi nào ở change pass, ko nó diễn ra ở verifyPassField, khi người dùng gõ cái j đó vào, v thì
-        //Viết ở đây là sai r, cái hàm này chỉ đc kích hoạt khi ngta bấm nút OK
+
 
         oldPass = oldPassField.getText();
         newPass = newPassField.getText();
@@ -315,7 +330,6 @@ public class AccountManagerController implements Initializable {
             popup.popupBoxMess("Password is wrong!",2);
             return false;
         }
-        //
         //popup success
         popup.popupBoxMess("Success!",1);
         return true;

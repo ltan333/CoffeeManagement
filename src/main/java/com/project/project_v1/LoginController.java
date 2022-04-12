@@ -34,7 +34,7 @@ public class LoginController implements Initializable {
     private Button loginBtn;
 
     @FXML
-    private CheckBox remenberLoginCheckbox;
+    private CheckBox rememberLoginCheckbox;
 
     @FXML
     private Button forgotPassBtn;
@@ -64,7 +64,7 @@ public class LoginController implements Initializable {
     }
 
     public void forgotPassBtnClicked() {
-        popup.popupBoxMess("Please Contact Me!",1);
+        popup.popupBoxMess("Please Contact To Me!",1);
     }
 
 

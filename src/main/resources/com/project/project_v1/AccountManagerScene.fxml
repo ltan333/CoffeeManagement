@@ -26,7 +26,7 @@
                      <graphic>
                         <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@icons8-back-96.png" />
+                              <Image url="@icon/icons8-back-96.png" />
                            </image>
                            <effect>
                               <Lighting>
@@ -52,7 +52,7 @@
                      <graphic>
                         <ImageView fitHeight="51.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@icons8-account-100.png" />
+                              <Image url="@icon/icons8-account-100.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -65,7 +65,7 @@
                      <graphic>
                         <ImageView fitHeight="29.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@icons8-info-80.png" />
+                              <Image url="@icon/icons8-info-80.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -80,7 +80,7 @@
                      <graphic>
                         <ImageView fitHeight="29.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@icons8-password-64.png" />
+                              <Image url="@icon/icons8-password-64.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -95,7 +95,7 @@
                      <graphic>
                         <ImageView fitHeight="29.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@icons8-logout-80.png" />
+                              <Image url="@icon/icons8-logout-80.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -147,7 +147,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="changePassScene" prefHeight="400.0" prefWidth="442.0" visible="false">
+            <AnchorPane fx:id="changePassScene" prefHeight="400.0" prefWidth="442.0">
                <children>
                   <PasswordField fx:id="oldPassField" layoutX="118.0" layoutY="72.0" prefHeight="26.0" prefWidth="206.0" promptText="Old Password" style="-fx-border-radius: 21;" />
                   <PasswordField fx:id="newPassField" layoutX="118.0" layoutY="155.0" prefHeight="26.0" prefWidth="206.0" promptText="New Password" style="-fx-border-radius: 21;" />
@@ -161,7 +161,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="forgotPassBtn" layoutX="162.0" layoutY="305.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="117.0" style="-fx-background-color: #3e4044#2f3136; -fx-cursor: hand;" text="Forgot Password?" textFill="#00727f">
+                  <Button fx:id="forgotPassBtn" layoutX="162.0" layoutY="305.0" mnemonicParsing="false" onAction="#forgotPassBtnClicked" prefHeight="27.0" prefWidth="117.0" style="-fx-background-color: #3e4044#2f3136; -fx-cursor: hand;" text="Forgot Password?" textFill="#00727f">
                      <font>
                         <Font name="System Italic" size="13.0" />
                      </font>

@@ -22,7 +22,7 @@
                <graphic>
                   <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@icons8-back-96.png" />
+                        <Image url="@icon/icons8-back-96.png" />
                      </image>
                      <effect>
                         <Lighting>
@@ -48,7 +48,7 @@
                <graphic>
                   <ImageView fitHeight="51.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@icons8-bill-64.png" />
+                        <Image url="@icon/icons8-bill-64.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -61,7 +61,7 @@
                <graphic>
                   <ImageView fitHeight="29.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@a.png" />
+                        <Image url="@icon/a.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -76,7 +76,7 @@
                <graphic>
                   <ImageView fitHeight="29.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@c.png" />
+                        <Image url="@icon/c.png" />
                      </image>
                   </ImageView>
                </graphic>

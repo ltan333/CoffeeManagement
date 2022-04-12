@@ -54,6 +54,26 @@ public class CreateMessBox {
             }
         }
 
+    public void popupBoxMessContent(String header, String content, int popuptype){
+        Alert alert;
+        if(popuptype==1){
+            alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Information Dialog");
+        }
+        else if(popuptype==2){
+            alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning Dialog");
+        }
+        else{
+            alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error Dialog");
+        }
+
+        alert.setHeaderText(header);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
+
 
 
     }

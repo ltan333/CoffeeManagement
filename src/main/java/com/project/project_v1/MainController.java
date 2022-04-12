@@ -36,10 +36,15 @@ public class MainController {
         Platform.exit();
     }
 
-    public void logout(ActionEvent event) throws IOException {
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+    public void logout() throws IOException {
+        stage = (Stage)orderManageBtn.getScene().getWindow();
         stage.close();
         new LoginController().createLoginStage();
+    }
+
+    public void aboutMe() {
+        new CreateMessBox().popupBoxMessContent("My Infomation","An\n+84777931783\nanb1906617@student.ctu.edu.vn",1);
+
     }
     public void createMainStage() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("mainScene.fxml"));

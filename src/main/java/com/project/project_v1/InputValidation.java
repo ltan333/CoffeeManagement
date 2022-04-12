@@ -1,8 +1,11 @@
 package com.project.project_v1;
 
+import javafx.scene.Parent;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.regex.Pattern;
 
 public class InputValidation {
     public boolean isEmptyString(String inputString) {
@@ -31,6 +34,37 @@ public class InputValidation {
             //Còn nếu nó ko parse đc thì nó lỗi nó sẽ văng xuống đây và trả về false./
         } catch (NumberFormatException e) {//Cái lỗi đó nó cũng là 1 class, phải tạo đối tượng cho nó để có thể in ra lỗi ntn
             e.getMessage();//nó sẽ trả về mess của lôi
+            return false;
+        }
+    }
+
+    public String setNameFormat(String name){
+        String[] nameArr = name.toLowerCase().split(" ");
+        String nameFormat="";
+        for(int i =0; i<nameArr.length;i++){
+            String[] a = nameArr[i].split("");
+            a[0] = a[0].toUpperCase();
+            for(String charac:a){
+                nameFormat+=charac;
+            }
+            if(i!=nameArr.length-1)
+                nameFormat+=" ";
+        }
+        return nameFormat;
+    }
+
+    public boolean isEmail(String email){
+        String regexPattern = "^(.+)@(\\S+)$";
+        return Pattern.compile(regexPattern).matcher(email).matches();
+    }
+
+    public boolean isPhoneNumber(String phone){
+        try {
+            if(phone.length()!=10)
+                return false;
+            Long p = Long.parseLong(phone);
+            return true;
+        }catch (NumberFormatException e){
             return false;
         }
     }
