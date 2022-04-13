@@ -145,7 +145,7 @@ public class MenuManagerController implements Initializable {
         for (Product element :list) {
             l = element.createItem();
             priceLabel = createPriceLabel(element.getPrice()+"");
-            delLabel = createDelLabel(".\\src\\main\\resources\\com\\project\\project_v1\\del.png");
+            delLabel = createDelLabel(".\\src\\main\\resources\\com\\project\\project_v1\\icon\\del.png");
             gridPane.add(l,x,y);
             gridPane.add(priceLabel,x,y);
             gridPane.add(delLabel,x++,y);

@@ -147,7 +147,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="changePassScene" prefHeight="400.0" prefWidth="442.0">
+            <AnchorPane fx:id="changePassScene" prefHeight="400.0" prefWidth="442.0" visible="false">
                <children>
                   <PasswordField fx:id="oldPassField" layoutX="118.0" layoutY="72.0" prefHeight="26.0" prefWidth="206.0" promptText="Old Password" style="-fx-border-radius: 21;" />
                   <PasswordField fx:id="newPassField" layoutX="118.0" layoutY="155.0" prefHeight="26.0" prefWidth="206.0" promptText="New Password" style="-fx-border-radius: 21;" />

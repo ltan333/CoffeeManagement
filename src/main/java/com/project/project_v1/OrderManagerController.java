@@ -171,7 +171,7 @@ public class OrderManagerController implements Initializable {
         for (Product element : list) {
             Label l = element.createItem();
             Label priceLabel = new MenuManagerController().createPriceLabel(element.getPrice() + "");
-            Label addLabel = new MenuManagerController().createDelLabel(".\\src\\main\\resources\\com\\project\\project_v1\\add.png");
+            Label addLabel = new MenuManagerController().createDelLabel(".\\src\\main\\resources\\com\\project\\project_v1\\icon\\add.png");
             gridPane.add(l, x, y);
             gridPane.add(priceLabel, x, y);
             gridPane.add(addLabel, x++, y);
@@ -399,7 +399,7 @@ public class OrderManagerController implements Initializable {
     }
 
     private Label createIsPaidLabel(boolean isPaid) {
-        Image image = new Image("file:.\\src\\main\\resources\\com\\project\\project_v1\\paid.png");
+        Image image = new Image("file:.\\src\\main\\resources\\com\\project\\project_v1\\icon\\paid.png");
         Label l = new Label();
         l.setLayoutX(485);
         l.setAlignment(Pos.CENTER);
@@ -438,7 +438,7 @@ public class OrderManagerController implements Initializable {
     }
 
     private ImageView createImageView() {
-        Image image = new Image("file:.\\src\\main\\resources\\com\\project\\project_v1\\del.png");
+        Image image = new Image("file:.\\src\\main\\resources\\com\\project\\project_v1\\icon\\del.png");
         ImageView imageView = new ImageView(image);
         imageView.setFitHeight(35);
         imageView.setFitWidth(35);
